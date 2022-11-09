@@ -1,0 +1,21 @@
+<h1>Room <%= @room.id %></h1>
+
+<%= link_to "Leave", root_path %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="messages">
+      <div class="messages-inner" id="messages" data-room-id="<%= @room.id %>">
+        <%= render @room.messages %>
+      </div>
+    </div>
+  <%= render 'messages/form' %>
+  </div>
+
+  <div class="col-md-4" id="online" data-room-id="<%= @room.id %>">
+  <%= render @room.onlines %>
+  </div>
+</div>
+

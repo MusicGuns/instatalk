@@ -1,10 +1,14 @@
 development:
-  adapter: async
+  adapter: redis
+  url: redis://redis:6379/0
+  channel_prefix: instatalk_production
 
 test:
-  adapter: async
+  adapter: redis
+  url: redis://redis:6379/0
+  channel_prefix: instatalk_production
 
 production:
   adapter: redis
-  url: ...
+  url: redis://redis:6379/0
   channel_prefix: instatalk_production
